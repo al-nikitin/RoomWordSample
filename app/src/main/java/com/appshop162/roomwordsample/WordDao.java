@@ -11,7 +11,7 @@ import java.util.List;
 @Dao
 public interface WordDao {
 
-    @Insert(onConflict = OnConflictStrategy.ABORT)
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insert(Word word);
 
     @Query("DELETE FROM word_table")
